@@ -1,0 +1,52 @@
+body {
+    background-color: #111;
+    color: #ddd;
+}
+
+.bar {
+    background-color: #222;
+    display: flex;
+    position: fixed;
+    margin: 1rem 4vh;
+    width: 95%;
+    gap: 100px;
+    border-radius: 10px;
+}
+
+.bar p:first-child {
+    margin-left: 4vh;
+    margin-right: auto;
+}
+
+.bar p:last-child {
+    margin-right: 5vh;
+}
+
+.bar p a {
+    color: #fff;
+    text-decoration: none;
+    font-size: 1.6rem;
+}
+
+main {
+    padding-top: 12rem;
+}
+
+.hero {
+    padding-left: 8rem;
+    display: flex;
+}
+
+.hero img {
+    margin: auto;
+}
+
+.hero h1 {
+    font-size: 6rem;
+    color: #ccc;
+}
+
+.hero h2 {
+    font-weight: 500;
+    color: #999;
+}
