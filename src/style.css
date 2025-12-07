@@ -7,14 +7,14 @@ body {
     background-image:
         radial-gradient(circle at left top, rgba(255,255,255,0.05), transparent 35%),
         radial-gradient(circle at right top, rgba(255,255,255,0.05), transparent 35%),
-        repeating-linear-gradient(#232323 0 1px, transparent 1px 50px),
-        repeating-linear-gradient(90deg, #232323 0 1px, transparent 1px 50px);
+        repeating-linear-gradient(#232323 0 1px, transparent 1px 2rem),
+        repeating-linear-gradient(90deg, #232323 0 1px, transparent 1px 2rem);
     
     background-size: 
         50% 100vh,
         50% 100vh,
-        100% 35px,
-        35px 100%;
+        100% 2rem,
+        2rem 100%;
 }
 
 .bar {
@@ -46,31 +46,83 @@ body {
 
 .bar p a img {
     position: fixed;
-    height: 3.5vh;
-    top: 2.25vh;
+    height: 3rem;
+    top: 2rem;
 }
 
 main {
-    padding-top: 12rem;
+    min-height: 100vh; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 5vh 0;
+    gap: 5rem;
+}
+
+.info, .hero {
+    width: 80rem;
 }
 
 .hero {
-    padding-left: 8rem;
     display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
 }
 
 .hero img {
     margin: auto;
     height: auto;
-    max-height: 600px;
+    width: 20rem;
 }
 
 .hero h1 {
-    font-size: 6rem;
+    font-size: 4rem;
     color: #fff;
 }
 
 .hero h2 {
-    font-weight: 500;
+    font-weight: 400;
     color: #999;
+}
+
+.info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem 3%;
+}
+
+.info-box {
+    background-color: #181818;
+    border: 1px solid #383838;
+    border-radius: 1rem;
+    padding: 1.5rem 2.5rem;
+    display: flex;
+    width: calc(42%);
+    max-width: calc(100% / 2 - 6.62rem);
+}
+
+.info-destacado {
+    max-width: 100%;
+    width: 100%;
+}
+
+.info-icon {
+    display: flex;
+    background-color: #304E22;
+    border: 1px solid #84EE53;
+    border-radius: 0.5rem;
+    width: 2rem;
+    height: 2rem;
+    justify-content: center;
+    align-items: center;
+}
+
+.info-box img {
+    width: 1.3rem;
+    height: 1.3rem;
+    filter: invert();
 }
