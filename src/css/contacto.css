@@ -1,0 +1,68 @@
+.floating-form {
+    width: 20rem;
+    padding: 2rem;
+    background: #111;
+    border-radius: 1.25rem;
+    box-shadow: 0 1rem 2rem rgba(75,75,75,0.15);
+}
+
+.floating-form h2 {
+    text-align: center;
+    font-size: 2rem;
+    margin-top: 0;
+    margin-bottom: 2.5rem;
+}
+
+.field {
+    position: relative;
+    margin-bottom: 1.5rem;
+}
+
+.field input, .field textarea {
+    width: 100%;
+    padding: 0.9rem 0;
+    border: 1px solid #bbb;
+    border-radius: 0.75rem;
+    outline: none;
+    font-size: 1rem;
+    background: transparent;
+    color: #eee;
+    text-indent: 1rem;
+}
+
+.field textarea {
+    min-height: 5rem;
+    resize: none;
+}
+
+.field label {
+    position: absolute;
+    left: 1rem;
+    top: 50%;
+    transform: translateY(-50%);
+    padding: 0 .25rem;
+    color: #bbb;
+    transition: 0.2s ease;
+    pointer-events: none;
+}
+
+.field input:focus + label, .field input:not(:placeholder-shown) + label,
+.field textarea:focus + label, .field textarea:not(:placeholder-shown) + label {
+    top: -0.75rem;
+    font-size: 0.75rem;
+}
+
+button {
+    width: 100%;
+    padding: 1rem;
+    border: none;
+    border-radius: 0.75rem;
+    background: #007bff;
+    color: #fff;
+    cursor: pointer;
+    font-size: 1.2rem;
+}
+
+button:hover {
+    background: #005fcc;
+}
