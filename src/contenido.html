@@ -1,242 +1,254 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explicacion de comunicaciones RF</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contenido.css">
-</head>
-<body>
-    <header>
-        <div class="bar">
-            <p>
-                <a href="index.html"><img src="assets/sinewave-logo.png" alt="Inicio"></a>
-            </p>
-            <p><a href="contenido.html">Contenido</a></p>
-            <p><a href="meshtastic.html">Meshtastic</a></p>
-            <p><a href="sdr.html">SDR</a></p>
-            <p><a href="contacto.html">Contacto</a></p>
-        </div>
-    </header>
-    <main>
-        <div class="contenido">
-            <input type="radio" name="slider" id="s1" checked>
-            <input type="radio" name="slider" id="s2">
-            <input type="radio" name="slider" id="s3">
-            <input type="radio" name="slider" id="s4">
-            <input type="radio" name="slider" id="s5">
-            <input type="radio" name="slider" id="s6">
-            <input type="radio" name="slider" id="s7">
-            <input type="radio" name="slider" id="s8">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Explicacion de comunicaciones RF</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/contenido.css" />
+    </head>
+    <body>
+        <header>
+            <div class="bar">
+                <p>
+                    <a href="index.html"><img src="assets/sinewave-logo.png" alt="Inicio" /></a>
+                </p>
+                <p><a href="contenido.html">Contenido</a></p>
+                <p><a href="meshtastic.html">Meshtastic</a></p>
+                <p><a href="sdr.html">SDR</a></p>
+                <p><a href="contacto.html">Contacto</a></p>
+            </div>
+        </header>
+        <main>
+            <section class="contenido">
+                <input type="radio" name="slider" id="s1" checked />
+                <input type="radio" name="slider" id="s2" />
+                <input type="radio" name="slider" id="s3" />
+                <input type="radio" name="slider" id="s4" />
+                <input type="radio" name="slider" id="s5" />
+                <input type="radio" name="slider" id="s6" />
+                <input type="radio" name="slider" id="s7" />
+                <input type="radio" name="slider" id="s8" />
 
-            <section>
-                <h1>Introduccion a las Radiofrecuencias (RF)</h1>
+                <article>
+                    <h1>Introduccion a las Radiofrecuencias (RF)</h1>
 
-                <h2>1. Que son las radiofrecuencias?</h2>
-                <p>Las radiofrecuencias son ondas electromagneticas invisibles que viajan a traves del aire o el espacio, se utilizan principalmente para <strong>transportar informacion</strong> de un punto a otro sin necesidad de cables</p>
-                <p>Se generan cuando una corriente electrica AC pasa a traves de una antena</p>
+                    <h2>1. Que son las radiofrecuencias?</h2>
+                    <p>Las radiofrecuencias son ondas electromagneticas invisibles que viajan a traves del aire o el espacio, se utilizan principalmente para <strong>transportar informacion</strong> de un punto a otro sin necesidad de cables</p>
+                    <p>Se generan cuando una corriente electrica AC pasa a traves de una antena</p>
+                </article>
 
-                <h2>2. Caracteristicas de una onda</h2>
-                <p>Para entender una onda de radio, debemos distinguir sus tres componentes basicos:</p>
-                <ul>
-                    <li><strong>Amplitud:</strong> Es la altura de la onda, determina la potencia/intensidad de la señal</li>
-                    <li><strong>Frecuencia:</strong> Es la velocidad a la que vibra la onda, se mide en ciclos por segundo</li>
-                    <li><strong>Longitud de onda:</strong> Es la distancia fisica entre dos picos de la onda</li>
-                </ul>
-                <div class="note">
-                    <strong>Importante:</strong> A mayor frecuencia, menor longitud de onda (la onda es mas pequeña)
-                </div>
+                <article>
+                    <h2>2. Caracteristicas de una onda</h2>
+                    <p>Para entender una onda de radio, debemos distinguir sus tres componentes basicos:</p>
+                    <ul>
+                        <li><strong>Amplitud:</strong> Es la altura de la onda, determina la potencia/intensidad de la señal</li>
+                        <li><strong>Frecuencia:</strong> Es la velocidad a la que vibra la onda, se mide en ciclos por segundo</li>
+                        <li><strong>Longitud de onda:</strong> Es la distancia fisica entre dos picos de la onda</li>
+                    </ul>
+                    <div class="note"><strong>Importante:</strong> A mayor frecuencia, menor longitud de onda (la onda es mas pequeña)</div>
+                </article>
 
-                <h2>3. El Espectro y las Bandas de Frecuencia</h2>
-                <p>El espectro radioelectrico se divide en bandas y canales para organizar los diferentes servicios y evitar interferencias</p>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Banda</th>
-                            <th>Nombre</th>
-                            <th>Rango Tipico</th>
-                            <th>Usos Comunes</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>HF</strong></td>
-                            <td>Alta Frecuencia</td>
-                            <td>3 - 30 MHz</td>
-                            <td>Radio de onda corta, comunicaciones maritimas</td>
-                        </tr>
-                        <tr>
-                            <td><strong>VHF</strong></td>
-                            <td>Muy Alta Frecuencia</td>
-                            <td>30 - 300 MHz</td>
-                            <td>Radio FM, Television antigua, radios policiales</td>
-                        </tr>
-                        <tr>
-                            <td><strong>UHF</strong></td>
-                            <td>Ultra Alta Frecuencia</td>
-                            <td>300 MHz - 3 GHz</td>
-                            <td>Wi-Fi, Bluetooth, moviles (4G/5G), GPS</td>
-                        </tr>
-                        <tr>
-                            <td><strong>SHF</strong></td>
-                            <td>Super Alta Frecuencia</td>
-                            <td>3 - 30 GHz</td>
-                            <td>Radares, enlaces satelitales, Wi-Fi 6E</td>
-                        </tr>
-                    </tbody>
-                </table>
+                <article>
+                    <h2>3. El Espectro y las Bandas de Frecuencia</h2>
+                    <p>El espectro radioelectrico se divide en bandas y canales para organizar los diferentes servicios y evitar interferencias</p>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Banda</th>
+                                <th>Nombre</th>
+                                <th>Rango Tipico</th>
+                                <th>Usos Comunes</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>HF</strong></td>
+                                <td>Alta Frecuencia</td>
+                                <td>3 - 30 MHz</td>
+                                <td>Radio de onda corta, comunicaciones maritimas</td>
+                            </tr>
+                            <tr>
+                                <td><strong>VHF</strong></td>
+                                <td>Muy Alta Frecuencia</td>
+                                <td>30 - 300 MHz</td>
+                                <td>Radio FM, Television antigua, radios policiales</td>
+                            </tr>
+                            <tr>
+                                <td><strong>UHF</strong></td>
+                                <td>Ultra Alta Frecuencia</td>
+                                <td>300 MHz - 3 GHz</td>
+                                <td>Wi-Fi, Bluetooth, moviles (4G/5G), GPS</td>
+                            </tr>
+                            <tr>
+                                <td><strong>SHF</strong></td>
+                                <td>Super Alta Frecuencia</td>
+                                <td>3 - 30 GHz</td>
+                                <td>Radares, enlaces satelitales, Wi-Fi 6E</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
 
-                <h2>4. Propagacion de ondas</h2>
-                <p>A diferencia de algunas creencias, no todas las señales son directas</p>
-                <ul>
-                    <li><strong>Linea de vista:</strong> La onda viaja directo de antena a antena sin obstaculos</li>
-                    <li><strong>Reflexion:</strong> La onda choca contra superficies grandes (edificios, suelo) y rebota</li>
-                    <li><strong>Difraccion:</strong> La onda choca con un borde afilado y se curva para rodear el obstaculo</li>
-                    <li><strong>Absorcion:</strong> La señal es absorbida por materiales (paredes de ladrillo, agua, arboles) y pierde potencia</li>
-                </ul>
-                <p>Algunas frecuencias como las HF pueden llegar a rebotar en la capa de ozono o la luna para conseguir comunicaciones de miles de kilometros</p>
+                <article>
+                    <h2>4. Propagacion de ondas</h2>
+                    <p>A diferencia de algunas creencias, no todas las señales son directas</p>
+                    <ul>
+                        <li><strong>Linea de vista:</strong> La onda viaja directo de antena a antena sin obstaculos</li>
+                        <li><strong>Reflexion:</strong> La onda choca contra superficies grandes (edificios, suelo) y rebota</li>
+                        <li><strong>Difraccion:</strong> La onda choca con un borde afilado y se curva para rodear el obstaculo</li>
+                        <li><strong>Absorcion:</strong> La señal es absorbida por materiales (paredes de ladrillo, agua, arboles) y pierde potencia</li>
+                    </ul>
+                    <p>Algunas frecuencias como las HF pueden llegar a rebotar en la capa de ozono o la luna para conseguir comunicaciones de miles de kilometros</p>
+                </article>
 
-                <h2>5. Tipos de modulacion</h2>
-                <p>La modulacion es el proceso de modificar una onda para agregar informacion</p>
-                <ul>
-                    <li><strong>Analogica:</strong>
-                        <ul>
-                            <li><em>AM (Amplitud Modulada):</em> Modifica la potencia</li>
-                            <li><em>FM (Frecuencia Modulada):</em> Modifica la velocidad</li>
-                        </ul>
-                    </li>
-                    <li><strong>Digital:</strong>
-                        <ul>
-                            <li>Utiliza esquemas complejos (como <strong>QAM</strong> o <strong>PSK</strong>) para enviar binario, es el estandar actual para Wi-Fi y 4G o 5G</li>
-                        </ul>
-                    </li>
-                </ul>
+                <article>
+                    <h2>5. Tipos de modulacion</h2>
+                    <p>La modulacion es el proceso de modificar una onda para agregar informacion</p>
+                    <ul>
+                        <li>
+                            <strong>Analogica:</strong>
+                            <ul>
+                                <li><em>AM (Amplitud Modulada):</em> Modifica la potencia</li>
+                                <li><em>FM (Frecuencia Modulada):</em> Modifica la velocidad</li>
+                            </ul>
+                        </li>
+                        <li>
+                            <strong>Digital:</strong>
+                            <ul>
+                                <li>Utiliza esquemas complejos (como <strong>QAM</strong> o <strong>PSK</strong>) para enviar binario, es el estandar actual para Wi-Fi y 4G o 5G</li>
+                            </ul>
+                        </li>
+                    </ul>
+                </article>
 
-                <h2>6. Unidades de medida fundamentales</h2>
-                <table>
-                    <thead>
-                        <tr>
-                            <th>Unidad</th>
-                            <th>Simbolo</th>
-                            <th>¿Que mide?</th>
-                            <th>Explicacion sencilla</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td><strong>Hertz</strong></td>
-                            <td>Hz</td>
-                            <td>Frecuencia</td>
-                            <td>1 Hz = 1 ciclo por segundo</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Watt</strong></td>
-                            <td>W</td>
-                            <td>Potencia</td>
-                            <td>La energia real que emite la antena</td>
-                        </tr>
-                        <tr>
-                            <td><strong>Decibelio</strong></td>
-                            <td>dB</td>
-                            <td>Ganancia o Perdida</td>
-                            <td>Hay que tener en cuenta que los dB son relativos +3dB es el doble</td>
-                        </tr>
-                        <tr>
-                            <td><strong>dBm</strong></td>
-                            <td>dBm</td>
-                            <td>Potencia absoluta</td>
-                            <td>Mide la potencia referenciada a 1 milivatio (0 dBm = 1 mW)</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </section>
+                <article>
+                    <h2>6. Unidades de medida fundamentales</h2>
+                    <table>
+                        <thead>
+                            <tr>
+                                <th>Unidad</th>
+                                <th>Simbolo</th>
+                                <th>¿Que mide?</th>
+                                <th>Explicacion sencilla</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td><strong>Hertz</strong></td>
+                                <td>Hz</td>
+                                <td>Frecuencia</td>
+                                <td>1 Hz = 1 ciclo por segundo</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Watt</strong></td>
+                                <td>W</td>
+                                <td>Potencia</td>
+                                <td>La energia real que emite la antena</td>
+                            </tr>
+                            <tr>
+                                <td><strong>Decibelio</strong></td>
+                                <td>dB</td>
+                                <td>Ganancia o Perdida</td>
+                                <td>Hay que tener en cuenta que los dB son relativos +3dB es el doble</td>
+                            </tr>
+                            <tr>
+                                <td><strong>dBm</strong></td>
+                                <td>dBm</td>
+                                <td>Potencia absoluta</td>
+                                <td>Mide la potencia referenciada a 1 milivatio (0 dBm = 1 mW)</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </article>
 
-            <hr>
+                <hr />
 
-            <h1>Adentrate en el campo</h1>
-            <div class="slider-wrapper">
-                <div class="controls">
-                    <label for="s1" class="arrow-prev prev-s2"></label>
-                    <label for="s2" class="arrow-prev prev-s3"></label>
-                    <label for="s3" class="arrow-prev prev-s4"></label>
-                    <label for="s4" class="arrow-prev prev-s5"></label>
-                    <label for="s5" class="arrow-prev prev-s6"></label>
-                    <label for="s6" class="arrow-prev prev-s7"></label>
-                    <label for="s7" class="arrow-prev prev-s8"></label>
+                <article>
+                    <h1>Adentrate en el campo</h1>
+                    <div class="slider-wrapper">
+                        <div class="controls">
+                            <label for="s1" class="arrow-prev prev-s2"></label>
+                            <label for="s2" class="arrow-prev prev-s3"></label>
+                            <label for="s3" class="arrow-prev prev-s4"></label>
+                            <label for="s4" class="arrow-prev prev-s5"></label>
+                            <label for="s5" class="arrow-prev prev-s6"></label>
+                            <label for="s6" class="arrow-prev prev-s7"></label>
+                            <label for="s7" class="arrow-prev prev-s8"></label>
 
-                    <label for="s2" class="arrow-next next-s1"></label>
-                    <label for="s3" class="arrow-next next-s2"></label>
-                    <label for="s4" class="arrow-next next-s3"></label>
-                    <label for="s5" class="arrow-next next-s4"></label>
-                    <label for="s6" class="arrow-next next-s5"></label>
-                    <label for="s7" class="arrow-next next-s6"></label>
-                    <label for="s8" class="arrow-next next-s7"></label>
-                </div>
-
-                <div class="galeria-window">
-                    <div class="galeria-track">
-                        <div onclick="window.location='meshtastic.html'" class="galeria-item galeria-destacado">
-                            <img src="assets/imagenes/logo-meshtastic.png" alt="Meshtastic">
-                            <h2>1. Meshtastic</h2>
-                            <p>La red LoRa mas grande del mundo</p>
+                            <label for="s2" class="arrow-next next-s1"></label>
+                            <label for="s3" class="arrow-next next-s2"></label>
+                            <label for="s4" class="arrow-next next-s3"></label>
+                            <label for="s5" class="arrow-next next-s4"></label>
+                            <label for="s6" class="arrow-next next-s5"></label>
+                            <label for="s7" class="arrow-next next-s6"></label>
+                            <label for="s8" class="arrow-next next-s7"></label>
                         </div>
-                        <div onclick="window.location='sdr.html'" class="galeria-item galeria-destacado">
-                            <img src="assets/imagenes/sdr.webp" alt="SDR++">
-                            <h2>2. Introduccion a SDR</h2>
-                            <p>Aprende sobre radio definida por software</p>
-                        </div>
-                        <div class="galeria-item">
-                            <img src="assets/imagenes/red-mesh.png" alt="Redes Mesh">
-                            <h2>3. Red Mesh</h2>
-                            <p>Explicacion y uso de redes Mesh</p>
-                        </div>
-                        <div class="galeria-item">
-                            <img src="assets/imagenes/lora-logo-white.png" alt="LoRa">
-                            <h2>4. Introduccion a LoRa</h2>
-                            <p>El protocolo de comunicaciones del futuro</p>
-                        </div>
-                        <div class="galeria-item">
-                            <img src="assets/imagenes/radio-hardware.webp" alt="Hardware">
-                            <h2>5. Hardware de RF</h2>
-                            <p>Aprende sobre hardware y otros conceptos</p>
-                        </div>
-                        <div class="galeria-item">
-                            <img src="assets/imagenes/antena.webp" alt="Antenas">
-                            <h2>6. Antenas</h2>
-                            <p>La importancia de las antenas en RF</p>
-                        </div>
-                        <div class="galeria-item">
-                            <img src="assets/imagenes/rf-security.webp" alt="Seguridad de comunicaciones RF">
-                            <h2>7. Seguridad en RF</h2>
-                            <p>Problemas de seguridad en protocolos RF</p>
-                        </div>
-                        <div class="galeria-item">
-                            <img src="assets/imagenes/radio-mano.webp" alt="Comunicaciones por radio">
-                            <h2>8. Comunicacion en RF</h2>
-                            <p>Explicacion de una radio avanzada</p>
-                        </div>
-                        <div class="galeria-item">
-                            <img src="assets/imagenes/satelite.jpg" alt="Comunicacion satelital">
-                            <h2>9. Conexion satelital</h2>
-                            <p>Introducete a la comunicacion extraterrestre</p>
-                        </div>
-                        <div class="galeria-item">
-                            <img src="assets/imagenes/gps.jpg" alt="GPS">
-                            <h2>10. GPS</h2>
-                            <p>Aprende como funcionan GPS y Galileo</p>
+
+                        <div class="galeria-window">
+                            <div class="galeria-track">
+                                <div onclick="window.location='meshtastic.html'" class="galeria-item galeria-destacado">
+                                    <img src="assets/imagenes/logo-meshtastic.png" alt="Meshtastic" />
+                                    <h2>1. Meshtastic</h2>
+                                    <p>La red LoRa mas grande del mundo</p>
+                                </div>
+                                <div onclick="window.location='sdr.html'" class="galeria-item galeria-destacado">
+                                    <img src="assets/imagenes/sdr.webp" alt="SDR++" />
+                                    <h2>2. Introduccion a SDR</h2>
+                                    <p>Aprende sobre radio definida por software</p>
+                                </div>
+                                <div class="galeria-item">
+                                    <img src="assets/imagenes/red-mesh.png" alt="Redes Mesh" />
+                                    <h2>3. Red Mesh</h2>
+                                    <p>Explicacion y uso de redes Mesh</p>
+                                </div>
+                                <div class="galeria-item">
+                                    <img src="assets/imagenes/lora-logo-white.png" alt="LoRa" />
+                                    <h2>4. Introduccion a LoRa</h2>
+                                    <p>El protocolo de comunicaciones del futuro</p>
+                                </div>
+                                <div class="galeria-item">
+                                    <img src="assets/imagenes/radio-hardware.webp" alt="Hardware" />
+                                    <h2>5. Hardware de RF</h2>
+                                    <p>Aprende sobre hardware y otros conceptos</p>
+                                </div>
+                                <div class="galeria-item">
+                                    <img src="assets/imagenes/antena.webp" alt="Antenas" />
+                                    <h2>6. Antenas</h2>
+                                    <p>La importancia de las antenas en RF</p>
+                                </div>
+                                <div class="galeria-item">
+                                    <img src="assets/imagenes/rf-security.webp" alt="Seguridad de comunicaciones RF" />
+                                    <h2>7. Seguridad en RF</h2>
+                                    <p>Problemas de seguridad en protocolos RF</p>
+                                </div>
+                                <div class="galeria-item">
+                                    <img src="assets/imagenes/radio-mano.webp" alt="Comunicaciones por radio" />
+                                    <h2>8. Comunicacion en RF</h2>
+                                    <p>Explicacion de una radio avanzada</p>
+                                </div>
+                                <div class="galeria-item">
+                                    <img src="assets/imagenes/satelite.jpg" alt="Comunicacion satelital" />
+                                    <h2>9. Conexion satelital</h2>
+                                    <p>Introducete a la comunicacion extraterrestre</p>
+                                </div>
+                                <div class="galeria-item">
+                                    <img src="assets/imagenes/gps.jpg" alt="GPS" />
+                                    <h2>10. GPS</h2>
+                                    <p>Aprende como funcionan GPS y Galileo</p>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
+                </article>
+            </section>
+        </main>
+        <footer>
+            <div class="foot">
+                <p><a href="https://github.com/rsaisdead">Github - rsaisdead</a></p>
+                <p><a href="https://github.com/rsaisdead/LMSG_Proyecto1">Github - repositorio</a></p>
+                <p class="foot-special">© 2025 Repository Contributors. MIT</p>
             </div>
-        </div>
-    </main>
-    <footer>
-        <div class="foot">
-            <p><a href="https://github.com/rsaisdead">Github - rsaisdead</a></p>
-            <p><a href="https://github.com/rsaisdead/LMSG_Proyecto1">Github - repositorio</a></p>
-            <p class="foot-special">© 2025 Repository Contributors. MIT</p>
-        </div>
-    </footer>
-</body>
+        </footer>
+    </body>
 </html>

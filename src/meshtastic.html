@@ -1,66 +1,57 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explicacion de Meshtastic</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contenido.css">
-</head>
-<body>
     <head>
-        <div class="bar">
-            <p>
-                <a href="index.html"><img src="assets/sinewave-logo.png" alt="Inicio"></a>
-            </p>
-            <p><a href="contenido.html">Contenido</a></p>
-            <p><a href="meshtastic.html">Meshtastic</a></p>
-            <p><a href="sdr.html">SDR</a></p>
-            <p><a href="contacto.html">Contacto</a></p>
-        </div>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Explicacion de Meshtastic</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/contenido.css" />
     </head>
-    <main>
-        <div class="contenido">
-            <section>
-                <h1>Entendiendo Meshtastic</h1>
+    <body>
+        <head>
+            <div class="bar">
                 <p>
-                    Imagina poder enviar mensajes de texto, compartir tu ubicacion GPS y tener un chat grupal sin depender de ninguna torre de telefonia usando LoRa
+                    <a href="index.html"><img src="assets/sinewave-logo.png" alt="Inicio" /></a>
                 </p>
+                <p><a href="contenido.html">Contenido</a></p>
+                <p><a href="meshtastic.html">Meshtastic</a></p>
+                <p><a href="sdr.html">SDR</a></p>
+                <p><a href="contacto.html">Contacto</a></p>
+            </div>
+        </head>
+        <main>
+            <section class="contenido">
+                <h1>Entendiendo Meshtastic</h1>
+                <p>Imagina poder enviar mensajes de texto, compartir tu ubicacion GPS y tener un chat grupal sin depender de ninguna torre de telefonia usando LoRa</p>
 
                 <article>
                     <div>
                         <h2>1. Como funciona realmente una red Mesh?</h2>
-                        <p>
-                            En una red tradicional (como Wi-Fi), si te alejas del router, pierdes la conexion, en una red Mesh cada dispositivo funciona como un repetidor independiente
-                        </p>
-                        <p>
-                            Si tu quieres enviar un mensaje a un amigo que esta al otro lado de la montaña, tu radio no necesita llegar hasta el directamente, tu radio puede comunicarse con un nodo intermedio y ese nodo lo repite a otro en la cima de una colina o directamente a tu amigo
-                        </p>
+                        <p>En una red tradicional (como Wi-Fi), si te alejas del router, pierdes la conexion, en una red Mesh cada dispositivo funciona como un repetidor independiente</p>
+                        <p>Si tu quieres enviar un mensaje a un amigo que esta al otro lado de la montaña, tu radio no necesita llegar hasta el directamente, tu radio puede comunicarse con un nodo intermedio y ese nodo lo repite a otro en la cima de una colina o directamente a tu amigo</p>
                         <ul>
                             <li><strong>Autocurativa:</strong> Si un nodo se apaga, la red busca automaticamente otra ruta</li>
                             <li><strong>Descentralizada:</strong> Nadie es el jefe de la red, todos ayudan a todos a mover los datos</li>
                             <li><strong>Cifrada:</strong> Aunque todos repitan tu mensaje, solo el destinatario con la llave puede leerlo</li>
                         </ul>
                     </div>
-                    
+
                     <div class="image-wrapper">
-                        <img class="image-contenido" src="assets/imagenes/node-to-node.webp" alt="Comunicacion de A -> B -> C">
+                        <img class="image-contenido" src="assets/imagenes/node-to-node.webp" alt="Comunicacion de A -> B -> C" />
                     </div>
                     <p class="image-under">El mensaje salta de nodo en nodo hasta el destino (A -> B -> C)</p>
                 </article>
 
                 <article>
                     <h2>2. Anatomia de un Nodo Meshtastic</h2>
-                    <p>
-                        Para entrar en este mundo no necesitas equipos de alto valor, un nodo tipico cuesta menos de lo que se suele creer, pero, ¿que hay dentro de esas cajas impresas en 3D?
-                    </p>
+                    <p>Para entrar en este mundo no necesitas equipos de alto valor, un nodo tipico cuesta menos de lo que se suele creer, pero, ¿que hay dentro de esas cajas impresas en 3D?</p>
 
                     <div>
                         <div>
                             <h3>ESP32 / nRF52</h3>
                             <p>Es el microprocesador, los modelos ESP32 son potentes y tienen capacidad Wi-Fi (aunque gastan mas bateria), mientras que los nRF52 son super eficientes, usualmente se dejan con un pequeño panel solar durante años</p>
                         </div>
-                        
+
                         <div>
                             <h3>El Chip LoRa</h3>
                             <p>Es el componente que emite las ondas de radio, modula la informacion en campos electromagneticos que viajan kilometros usando un algoritmo muy avanzado capaz de entender comunicaciones por debajo del suelo de ruido y permitiendo un muy bajo consumo</p>
@@ -73,20 +64,15 @@
                     </div>
 
                     <div class="image-wrapper">
-                        <img class="image-contenido" src="assets/imagenes/tbeam.jpg" alt="Dispositivo Meshtastic TTGO TBeam">
+                        <img class="image-contenido" src="assets/imagenes/tbeam.jpg" alt="Dispositivo Meshtastic TTGO TBeam" />
                     </div>
                     <p class="image-under">Dispositivo Meshtastic TTGO TBeam encendido</p>
-
                 </article>
 
                 <article>
                     <h2>3. Velocidad vs Distancia</h2>
-                    <p>
-                        Aqui es donde muchos principiantes se confunden, Meshtastic permite configurar como se envian los datos, pero no puedes tenerlo todo si quieres que la señal llegue lejos, tendras baja velocidad y si quieres enviar muchos datos rapido, no llegaras tan lejos
-                    </p>
-                    <p>
-                        Estos ajustes preestablecidos se llaman "LoRa Presets", la mayoria de la comunidad usa <strong>LongFast</strong>
-                    </p>
+                    <p>Aqui es donde muchos principiantes se confunden, Meshtastic permite configurar como se envian los datos, pero no puedes tenerlo todo si quieres que la señal llegue lejos, tendras baja velocidad y si quieres enviar muchos datos rapido, no llegaras tan lejos</p>
+                    <p>Estos ajustes preestablecidos se llaman "LoRa Presets", la mayoria de la comunidad usa <strong>LongFast</strong></p>
 
                     <div>
                         <table>
@@ -120,17 +106,13 @@
                             </tbody>
                         </table>
                     </div>
-                    <div class="note">
-                        <strong>Importante:</strong> Si tienes tu radio en LongFast no tendras comunicacion con otros presets como ShortFast
-                    </div>
+                    <div class="note"><strong>Importante:</strong> Si tienes tu radio en LongFast no tendras comunicacion con otros presets como ShortFast</div>
                 </article>
 
                 <article>
                     <h2>4. Roles de los nodos Meshtastic</h2>
-                    <p>
-                        No todos los nodos son iguales, dependiendo de donde coloques tu dispositivo y cuanta energia tenga, debes asignarle un Rol, configurar esto mal puede saturar la red y molestar a otros usuarios
-                    </p>
-                    
+                    <p>No todos los nodos son iguales, dependiendo de donde coloques tu dispositivo y cuanta energia tenga, debes asignarle un Rol, configurar esto mal puede saturar la red y molestar a otros usuarios</p>
+
                     <ul>
                         <li>
                             <h4>CLIENT (Cliente)</h4>
@@ -153,17 +135,15 @@
 
                 <article>
                     <h2>5. Comunicacion entre redes Meshtastic (MQTT)</h2>
-                    <p>
-                        Aunque Meshtastic es una red off-grid, a veces queremos conectar ciudades enteras
-                    </p>
-                    <p>
-                        Si conectas un nodo a tu Wi-Fi y activas MQTT, tu nodo subira los mensajes que escuche a un servidor en internet esto permite que alguien en Madrid hable con alguien en Buenos Aires, usando internet como tunel entre las redes Mesh
-                    </p>
-                    
+                    <p>Aunque Meshtastic es una red off-grid, a veces queremos conectar ciudades enteras</p>
+                    <p>Si conectas un nodo a tu Wi-Fi y activas MQTT, tu nodo subira los mensajes que escuche a un servidor en internet esto permite que alguien en Madrid hable con alguien en Buenos Aires, usando internet como tunel entre las redes Mesh</p>
+
                     <div class="note">
                         <p><strong>Importante:</strong> Activar MQTT en el canal publico puede hacer que tu dispositivo reciba mensajes de todo el mundo</p>
                     </div>
                 </article>
+
+                <hr />
 
                 <article>
                     <h2>Algunos videos explicativos sobre Meshtastic</h2>
@@ -177,14 +157,13 @@
                     </div>
                 </article>
             </section>
-        </div>
-    </main>
-    <footer>
-        <div class="foot">
-            <p><a href="https://github.com/rsaisdead">Github - rsaisdead</a></p>
-            <p><a href="https://github.com/rsaisdead/LMSG_Proyecto1">Github - repositorio</a></p>
-            <p class="foot-special">© 2025 Repository Contributors. MIT</p>
-        </div>
-    </footer>
-</body>
+        </main>
+        <footer>
+            <div class="foot">
+                <p><a href="https://github.com/rsaisdead">Github - rsaisdead</a></p>
+                <p><a href="https://github.com/rsaisdead/LMSG_Proyecto1">Github - repositorio</a></p>
+                <p class="foot-special">© 2025 Repository Contributors. MIT</p>
+            </div>
+        </footer>
+    </body>
 </html>

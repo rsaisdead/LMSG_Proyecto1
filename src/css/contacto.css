@@ -3,7 +3,7 @@
     padding: 2rem;
     background: #151515;
     border-radius: 1.25rem;
-    box-shadow: 0 1rem 2rem rgba(75,75,75,0.15);
+    box-shadow: 0 1rem 2rem rgba(75, 75, 75, 0.15);
 }
 
 .floating-form h2 {
@@ -18,7 +18,8 @@
     margin-bottom: 1.5rem;
 }
 
-.field input, .field textarea {
+.field input,
+.field textarea {
     width: calc(100% - 2rem);
     padding: 0.9rem 1rem;
     border: 1px solid #bbb;
@@ -39,19 +40,22 @@
     left: 1rem;
     top: 50%;
     transform: translateY(-50%);
-    padding: 0 .25rem;
+    padding: 0 0.25rem;
     color: #bbb;
     transition: 0.2s ease;
     pointer-events: none;
 }
 
-.field input:focus + label, .field input:not(:placeholder-shown) + label,
-.field textarea:focus + label, .field textarea:not(:placeholder-shown) + label {
+.field input:focus + label,
+.field input:not(:placeholder-shown) + label,
+.field textarea:focus + label,
+.field textarea:not(:placeholder-shown) + label {
     top: -0.75rem;
     font-size: 0.75rem;
 }
 
-.field input:invalid, .field textarea:invalid {
+.field input:invalid,
+.field textarea:invalid {
     color: #ff5555;
     caret-color: #fff;
 }
@@ -70,5 +74,5 @@ button {
 
 button:hover {
     transform: scale(102%, 105%);
-    background: #C1F7FF;
+    background: #c1f7ff;
 }

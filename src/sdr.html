@@ -1,78 +1,59 @@
 <!DOCTYPE html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Explicacion Radio definida por software</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/contenido.css">
-</head>
-<body>
     <head>
-        <div class="bar">
-            <p>
-                <a href="index.html"><img src="assets/sinewave-logo.png" alt="Inicio"></a>
-            </p>
-            <p><a href="contenido.html">Contenido</a></p>
-            <p><a href="meshtastic.html">Meshtastic</a></p>
-            <p><a href="sdr.html">SDR</a></p>
-            <p><a href="contacto.html">Contacto</a></p>
-        </div>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Explicacion Radio definida por software</title>
+        <link rel="stylesheet" href="css/style.css" />
+        <link rel="stylesheet" href="css/contenido.css" />
     </head>
-    <main>
-        <div class="contenido">
-            <section>
+    <body>
+        <head>
+            <div class="bar">
+                <p>
+                    <a href="index.html"><img src="assets/sinewave-logo.png" alt="Inicio" /></a>
+                </p>
+                <p><a href="contenido.html">Contenido</a></p>
+                <p><a href="meshtastic.html">Meshtastic</a></p>
+                <p><a href="sdr.html">SDR</a></p>
+                <p><a href="contacto.html">Contacto</a></p>
+            </div>
+        </head>
+        <main>
+            <section class="contenido">
                 <header>
                     <h1>Introduccion a SDR</h1>
-                    <p>
-                        Durante mucho tiempo la radio fue hardware, resistencias y condensadores para permitir la comunicacion FM o AM, pero el SDR es distinto, con un simple dispositivo puedes convertir tu ordenador en una radio capaz de escuchar muchisimas frecuencias, desde la llave de tu coche hasta la ISS
-                    </p>
+                    <p>Durante mucho tiempo la radio fue hardware, resistencias y condensadores para permitir la comunicacion FM o AM, pero el SDR es distinto, con un simple dispositivo puedes convertir tu ordenador en una radio capaz de escuchar muchisimas frecuencias, desde la llave de tu coche hasta la ISS</p>
                 </header>
 
                 <article>
                     <div>
                         <h2>1. Que es la Radio Definida por Software?</h2>
-                        <p>
-                            En una radio tradicional, el hardware decide que se escucha y como se procesa el sonido, si querias mejorar el filtro de ruido, tenias que soldar un componente nuevo
-                        </p>
-                        <p>
-                            En el SDR, el hardware solo toma las ondas del aire y las convierte a binario para tu ordenador tome esos datos y use software para sintonizar, filtrar, amplificar y decodificar la señal
-                        </p>
-                        <p>
-                            Esto significa que el mismo dispositivo puede actuar como una radio FM, un receptor de GPS, un radar de aviones o un decodificador NOAA, solo cambiando el software que ejecuta tu PC
-                        </p>
+                        <p>En una radio tradicional, el hardware decide que se escucha y como se procesa el sonido, si querias mejorar el filtro de ruido, tenias que soldar un componente nuevo</p>
+                        <p>En el SDR, el hardware solo toma las ondas del aire y las convierte a binario para tu ordenador tome esos datos y use software para sintonizar, filtrar, amplificar y decodificar la señal</p>
+                        <p>Esto significa que el mismo dispositivo puede actuar como una radio FM, un receptor de GPS, un radar de aviones o un decodificador NOAA, solo cambiando el software que ejecuta tu PC</p>
                     </div>
                 </article>
 
                 <article>
                     <h2>2. Primer contacto con la interfaz</h2>
-                    <p>
-                        Cuando abres un software SDR, lo primero que ves es un grafico que se mueve hacia abajo, esto se llama <strong>Waterfall</strong> y FFT, es la herramienta mas potente de la radioescucha moderna
-                    </p>
-                    
+                    <p>Cuando abres un software SDR, lo primero que ves es un grafico que se mueve hacia abajo, esto se llama <strong>Waterfall</strong> y FFT, es la herramienta mas potente de la radioescucha moderna</p>
+
                     <ul>
-                        <li>
-                            <strong>Eje Horizontal (Frecuencia):</strong> Te permite ver un rango enorme del espectro a la vez, no sintoniza una estacion si no que las ves todas a la vez
-                        </li>
-                        <li>
-                            <strong>Eje Vertical (Tiempo):</strong> Muestra el historial de la señal, puedes ver si hubo alguna transmision anterior
-                        </li>
-                        <li>
-                            <strong>Color (Intensidad):</strong> El azul suele ser silencio o ruido de fondo, el rojo o amarillo brillante indica una señal fuerte
-                        </li>
+                        <li><strong>Eje Horizontal (Frecuencia):</strong> Te permite ver un rango enorme del espectro a la vez, no sintoniza una estacion si no que las ves todas a la vez</li>
+                        <li><strong>Eje Vertical (Tiempo):</strong> Muestra el historial de la señal, puedes ver si hubo alguna transmision anterior</li>
+                        <li><strong>Color (Intensidad):</strong> El azul suele ser silencio o ruido de fondo, el rojo o amarillo brillante indica una señal fuerte</li>
                     </ul>
 
                     <div class="image-wrapper">
-                        <img class="image-contenido" src="assets/imagenes/sdr_sharp.png" alt="Captura de SDR#">
+                        <img class="image-contenido" src="assets/imagenes/sdr_sharp.png" alt="Captura de SDR#" />
                     </div>
                     <p class="image-under">Captura de pantalla de SDR# - <a href="https://www.incibe.es/incibe-cert/blog/sdr-y-su-rol-ciberseguridad">INCIBE</a></p>
                 </article>
 
                 <article>
                     <h2>3. El Hardware, Que necesito comprar?</h2>
-                    <p>
-                        No necesitas gastar mucho, el SDR comenzo cuando se descubrio que sintonizadores de TV digital baratos podian usarse para esto
-                    </p>
+                    <p>No necesitas gastar mucho, el SDR comenzo cuando se descubrio que sintonizadores de TV digital baratos podian usarse para esto</p>
 
                     <table>
                         <thead>
@@ -114,9 +95,7 @@
 
                 <article>
                     <h2>4. Cosas que puedes hacer</h2>
-                    <p>
-                        Una vez tienes tu RTL-SDR y una antena basica, que puedes cazar en el aire?
-                    </p>
+                    <p>Una vez tienes tu RTL-SDR y una antena basica, que puedes cazar en el aire?</p>
 
                     <div>
                         <div>
@@ -133,35 +112,35 @@
                             <h3>Analisis de Llaves de Coche</h3>
                             <p>Usando la frecuencia de 433 MHz, puedes ver la señal que envia tu llave cuando abres el garaje o el coche (Los coches modernos tienen protecciones contra esto)</p>
                         </div>
-                        
+
                         <div>
                             <h3>Radioaficion y Emergencias</h3>
                             <p>Escucha conversaciones de radioaficionados, o sintoniza walkie-talkies PMR446 para ver quien habla cerca de ti</p>
                         </div>
                     </div>
-                    
+
                     <div class="image-wrapper">
-                        <img class="image-contenido" src="assets/imagenes/imagen-satelite-NOAA.jpeg" alt="Imagen de satelite NOAA-19s">
+                        <img class="image-contenido" src="assets/imagenes/imagen-satelite-NOAA.jpeg" alt="Imagen de satelite NOAA-19s" />
                     </div>
                     <p class="image-under">foto de satelite NOAA - <a href="https://sdr-es.com/recepcion-satelites-meteorologicos-HRPT/">sdr-es</a></p>
                 </article>
 
                 <article>
                     <h2>5. Software que puedes utilizar</h2>
-                    <p>
-                        El hardware no sirve de nada sin un software adecuado, quiza quieras instalar uno de estos:
-                    </p>
+                    <p>El hardware no sirve de nada sin un software adecuado, quiza quieras instalar uno de estos:</p>
                     <ul>
                         <li><strong>SDR++:</strong> Multiplataforma (Windows, Linux, Android), es moderno, ligero y muy visual, el mas usado</li>
                         <li><strong>SDR#:</strong> Principalmente para Windows, muy potente y cuenta con muchos plugins</li>
                         <li><strong>GQRX:</strong> Otra opcion para Linux o Mac</li>
                         <li><strong>GNU Radio:</strong> Ademas de reproductor es un lenguaje de programacion visual, conectas bloques para crear sistemas complejos</li>
                     </ul>
-                    
+
                     <div class="note">
                         <p><strong>Importante:</strong> En la españa escuchar es legal pero <strong>transmitir</strong> sin licencia o decodificar comunicaciones encriptadas/privadas (como telefonos o policiales) es un delito</p>
                     </div>
                 </article>
+
+                <hr />
 
                 <article>
                     <h2>Algunos videos explicativos</h2>
@@ -175,14 +154,13 @@
                     </div>
                 </article>
             </section>
-        </div>
-    </main>
-    <footer>
-        <div class="foot">
-            <p><a href="https://github.com/rsaisdead">Github - rsaisdead</a></p>
-            <p><a href="https://github.com/rsaisdead/LMSG_Proyecto1">Github - repositorio</a></p>
-            <p class="foot-special">© 2025 Repository Contributors. MIT</p>
-        </div>
-    </footer>
-</body>
+        </main>
+        <footer>
+            <div class="foot">
+                <p><a href="https://github.com/rsaisdead">Github - rsaisdead</a></p>
+                <p><a href="https://github.com/rsaisdead/LMSG_Proyecto1">Github - repositorio</a></p>
+                <p class="foot-special">© 2025 Repository Contributors. MIT</p>
+            </div>
+        </footer>
+    </body>
 </html>
