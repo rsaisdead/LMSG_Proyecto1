@@ -1,7 +1,7 @@
 .floating-form {
     width: 20rem;
     padding: 2rem;
-    background: #111;
+    background: #151515;
     border-radius: 1.25rem;
     box-shadow: 0 1rem 2rem rgba(75,75,75,0.15);
 }
@@ -19,15 +19,14 @@
 }
 
 .field input, .field textarea {
-    width: 100%;
-    padding: 0.9rem 0;
+    width: calc(100% - 2rem);
+    padding: 0.9rem 1rem;
     border: 1px solid #bbb;
     border-radius: 0.75rem;
     outline: none;
     font-size: 1rem;
     background: transparent;
     color: #eee;
-    text-indent: 1rem;
 }
 
 .field textarea {
@@ -52,17 +51,24 @@
     font-size: 0.75rem;
 }
 
+.field input:invalid, .field textarea:invalid {
+    color: #ff5555;
+    caret-color: #fff;
+}
+
 button {
     width: 100%;
     padding: 1rem;
     border: none;
     border-radius: 0.75rem;
-    background: #007bff;
-    color: #fff;
+    background: #cef5fb;
+    color: #252525;
     cursor: pointer;
     font-size: 1.2rem;
+    transition: 0.2s;
 }
 
 button:hover {
-    background: #005fcc;
+    transform: scale(102%, 105%);
+    background: #C1F7FF;
 }

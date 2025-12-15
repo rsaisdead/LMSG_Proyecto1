@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Red meshtastic</title>
+    <title>Explicacion de Meshtastic</title>
     <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="css/contenido.css">
 </head>
 <body>
     <head>
@@ -19,7 +20,164 @@
         </div>
     </head>
     <main>
-        
+        <div class="contenido">
+            <section>
+                <h1>Entendiendo Meshtastic</h1>
+                <p>
+                    Imagina poder enviar mensajes de texto, compartir tu ubicacion GPS y tener un chat grupal sin depender de ninguna torre de telefonia usando LoRa
+                </p>
+
+                <article>
+                    <div>
+                        <h2>1. Como funciona realmente una red Mesh?</h2>
+                        <p>
+                            En una red tradicional (como Wi-Fi), si te alejas del router, pierdes la conexion, en una red Mesh cada dispositivo funciona como un repetidor independiente
+                        </p>
+                        <p>
+                            Si tu quieres enviar un mensaje a un amigo que esta al otro lado de la montaña, tu radio no necesita llegar hasta el directamente, tu radio puede comunicarse con un nodo intermedio y ese nodo lo repite a otro en la cima de una colina o directamente a tu amigo
+                        </p>
+                        <ul>
+                            <li><strong>Autocurativa:</strong> Si un nodo se apaga, la red busca automaticamente otra ruta</li>
+                            <li><strong>Descentralizada:</strong> Nadie es el jefe de la red, todos ayudan a todos a mover los datos</li>
+                            <li><strong>Cifrada:</strong> Aunque todos repitan tu mensaje, solo el destinatario con la llave puede leerlo</li>
+                        </ul>
+                    </div>
+                    
+                    <div class="image-wrapper">
+                        <img class="image-contenido" src="assets/imagenes/node-to-node.webp" alt="Comunicacion de A -> B -> C">
+                    </div>
+                    <p class="image-under">El mensaje salta de nodo en nodo hasta el destino (A -> B -> C)</p>
+                </article>
+
+                <article>
+                    <h2>2. Anatomia de un Nodo Meshtastic</h2>
+                    <p>
+                        Para entrar en este mundo no necesitas equipos de alto valor, un nodo tipico cuesta menos de lo que se suele creer, pero, ¿que hay dentro de esas cajas impresas en 3D?
+                    </p>
+
+                    <div>
+                        <div>
+                            <h3>ESP32 / nRF52</h3>
+                            <p>Es el microprocesador, los modelos ESP32 son potentes y tienen capacidad Wi-Fi (aunque gastan mas bateria), mientras que los nRF52 son super eficientes, usualmente se dejan con un pequeño panel solar durante años</p>
+                        </div>
+                        
+                        <div>
+                            <h3>El Chip LoRa</h3>
+                            <p>Es el componente que emite las ondas de radio, modula la informacion en campos electromagneticos que viajan kilometros usando un algoritmo muy avanzado capaz de entender comunicaciones por debajo del suelo de ruido y permitiendo un muy bajo consumo</p>
+                        </div>
+
+                        <div>
+                            <h3>La Antena</h3>
+                            <p>Una mala antena te dejara incomunicado, no importa que tan bueno sea tu chip si la antena no esta afinada a tu frecuencia (868MHz o 915MHz)</p>
+                        </div>
+                    </div>
+
+                    <div class="image-wrapper">
+                        <img class="image-contenido" src="assets/imagenes/tbeam.jpg" alt="Dispositivo Meshtastic TTGO TBeam">
+                    </div>
+                    <p class="image-under">Dispositivo Meshtastic TTGO TBeam encendido</p>
+
+                </article>
+
+                <article>
+                    <h2>3. Velocidad vs Distancia</h2>
+                    <p>
+                        Aqui es donde muchos principiantes se confunden, Meshtastic permite configurar como se envian los datos, pero no puedes tenerlo todo si quieres que la señal llegue lejos, tendras baja velocidad y si quieres enviar muchos datos rapido, no llegaras tan lejos
+                    </p>
+                    <p>
+                        Estos ajustes preestablecidos se llaman "LoRa Presets", la mayoria de la comunidad usa <strong>LongFast</strong>
+                    </p>
+
+                    <div>
+                        <table>
+                            <thead>
+                                <tr>
+                                    <th>Nombre del Preset</th>
+                                    <th>Alcance Estimado</th>
+                                    <th>Velocidad de Datos</th>
+                                    <th>Uso Recomendado</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td><strong>ShortFast</strong></td>
+                                    <td>Bajo (1-3 km)</td>
+                                    <td>Alta</td>
+                                    <td>Ideal dentro de zonas reducidas o con linea de vision</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>LongFast</strong></td>
+                                    <td>Muy Alto (5-50+ km)</td>
+                                    <td>Media</td>
+                                    <td>El mas usado, es lo recomendado para tener un equilibrio en velocidad y distancia</td>
+                                </tr>
+                                <tr>
+                                    <td><strong>LongSlow</strong></td>
+                                    <td>Enormes</td>
+                                    <td>Baja</td>
+                                    <td>Muy baja velocidad de transmision, pero a la vez permite distancias enormes</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                    <div class="note">
+                        <strong>Importante:</strong> Si tienes tu radio en LongFast no tendras comunicacion con otros presets como ShortFast
+                    </div>
+                </article>
+
+                <article>
+                    <h2>4. Roles de los nodos Meshtastic</h2>
+                    <p>
+                        No todos los nodos son iguales, dependiendo de donde coloques tu dispositivo y cuanta energia tenga, debes asignarle un Rol, configurar esto mal puede saturar la red y molestar a otros usuarios
+                    </p>
+                    
+                    <ul>
+                        <li>
+                            <h4>CLIENT (Cliente)</h4>
+                            <p>Es el modo por defecto, asume que el dispositivo va conectado a un telefono y se mueve contigo, entra en modo suspension para ahorrar bateria</p>
+                        </li>
+                        <li>
+                            <h4>ROUTER (Enrutador)</h4>
+                            <p>Este nodo se coloca en lugares altos, siempre tiene energia (solar o enchufe) y su trabajo principal es repetir todo lo que escucha</p>
+                        </li>
+                        <li>
+                            <h4>REPEATER (Repetidor)</h4>
+                            <p>Similar al Router pero mas simple, solo repite paquetes, es invisible en la lista de nodos del chat para no "ensuciar" la interfaz visual</p>
+                        </li>
+                        <li>
+                            <h4>TRACKER (Rastreador)</h4>
+                            <p>Prioriza enviar coordenadas GPS y trata de gastar lo minimo posible para durar semanas, funcionando como un localizador</p>
+                        </li>
+                    </ul>
+                </article>
+
+                <article>
+                    <h2>5. Comunicacion entre redes Meshtastic (MQTT)</h2>
+                    <p>
+                        Aunque Meshtastic es una red off-grid, a veces queremos conectar ciudades enteras
+                    </p>
+                    <p>
+                        Si conectas un nodo a tu Wi-Fi y activas MQTT, tu nodo subira los mensajes que escuche a un servidor en internet esto permite que alguien en Madrid hable con alguien en Buenos Aires, usando internet como tunel entre las redes Mesh
+                    </p>
+                    
+                    <div class="note">
+                        <p><strong>Importante:</strong> Activar MQTT en el canal publico puede hacer que tu dispositivo reciba mensajes de todo el mundo</p>
+                    </div>
+                </article>
+
+                <article>
+                    <h2>Algunos videos explicativos sobre Meshtastic</h2>
+                    <div class="video-wrapper">
+                        <div class="video">
+                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/oDl8bv9s6FQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                        <div class="video">
+                            <iframe width="560" height="315" src="https://www.youtube-nocookie.com/embed/RJdram6xP0Y" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
+                        </div>
+                    </div>
+                </article>
+            </section>
+        </div>
     </main>
     <footer>
         <div class="foot">
@@ -28,6 +186,5 @@
             <p class="foot-special">© 2025 Repository Contributors. MIT</p>
         </div>
     </footer>
-    <!-- Explicacion de tipos de redes especificamente redes Mesh (como Meshtastic) su aplicacion en la vida real capacidad y usos -->
 </body>
 </html>
