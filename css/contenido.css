@@ -137,28 +137,28 @@ tr:nth-child(even) {
     border-radius: 2rem;
 }
 
-#s1:checked ~ .slider-wrapper .galeria-window .galeria-track {
+#s1:checked ~ article .slider-wrapper .galeria-window .galeria-track {
     transform: translateX(0rem);
 }
-#s2:checked ~ .slider-wrapper .galeria-window .galeria-track {
+#s2:checked ~ article .slider-wrapper .galeria-window .galeria-track {
     transform: translateX(-25rem);
 }
-#s3:checked ~ .slider-wrapper .galeria-window .galeria-track {
+#s3:checked ~ article .slider-wrapper .galeria-window .galeria-track {
     transform: translateX(-50rem);
 }
-#s4:checked ~ .slider-wrapper .galeria-window .galeria-track {
+#s4:checked ~ article .slider-wrapper .galeria-window .galeria-track {
     transform: translateX(-75rem);
 }
-#s5:checked ~ .slider-wrapper .galeria-window .galeria-track {
+#s5:checked ~ article .slider-wrapper .galeria-window .galeria-track {
     transform: translateX(-100rem);
 }
-#s6:checked ~ .slider-wrapper .galeria-window .galeria-track {
+#s6:checked ~ article .slider-wrapper .galeria-window .galeria-track {
     transform: translateX(-125rem);
 }
-#s7:checked ~ .slider-wrapper .galeria-window .galeria-track {
+#s7:checked ~ article .slider-wrapper .galeria-window .galeria-track {
     transform: translateX(-150rem);
 }
-#s8:checked ~ .slider-wrapper .galeria-window .galeria-track {
+#s8:checked ~ article .slider-wrapper .galeria-window .galeria-track {
     transform: translateX(-175rem);
 }
 
@@ -202,40 +202,40 @@ tr:nth-child(even) {
     right: -3.5rem;
 }
 
-#s1:checked ~ .slider-wrapper .controls .next-s1 {
+#s1:checked ~ article .slider-wrapper .controls .next-s1 {
     display: flex;
 }
 
-#s2:checked ~ .slider-wrapper .controls .prev-s2,
-#s2:checked ~ .slider-wrapper .controls .next-s2 {
+#s2:checked ~ article .slider-wrapper .controls .prev-s2,
+#s2:checked ~ article .slider-wrapper .controls .next-s2 {
     display: flex;
 }
 
-#s3:checked ~ .slider-wrapper .controls .prev-s3,
-#s3:checked ~ .slider-wrapper .controls .next-s3 {
+#s3:checked ~ article .slider-wrapper .controls .prev-s3,
+#s3:checked ~ article .slider-wrapper .controls .next-s3 {
     display: flex;
 }
 
-#s4:checked ~ .slider-wrapper .controls .prev-s4,
-#s4:checked ~ .slider-wrapper .controls .next-s4 {
+#s4:checked ~ article .slider-wrapper .controls .prev-s4,
+#s4:checked ~ article .slider-wrapper .controls .next-s4 {
     display: flex;
 }
 
-#s5:checked ~ .slider-wrapper .controls .prev-s5,
-#s5:checked ~ .slider-wrapper .controls .next-s5 {
+#s5:checked ~ article .slider-wrapper .controls .prev-s5,
+#s5:checked ~ article .slider-wrapper .controls .next-s5 {
     display: flex;
 }
 
-#s6:checked ~ .slider-wrapper .controls .prev-s6,
-#s6:checked ~ .slider-wrapper .controls .next-s6 {
+#s6:checked ~ article .slider-wrapper .controls .prev-s6,
+#s6:checked ~ article .slider-wrapper .controls .next-s6 {
     display: flex;
 }
 
-#s7:checked ~ .slider-wrapper .controls .prev-s7,
-#s7:checked ~ .slider-wrapper .controls .next-s7 {
+#s7:checked ~ article .slider-wrapper .controls .prev-s7,
+#s7:checked ~ article .slider-wrapper .controls .next-s7 {
     display: flex;
 }
 
-#s8:checked ~ .slider-wrapper .controls .prev-s8 {
+#s8:checked ~ article .slider-wrapper .controls .prev-s8 {
     display: flex;
 }
